@@ -1,15 +1,12 @@
 <div align="center">
-
-# ArcadeCord
-![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)
-![forthebadge](https://forthebadge.com/images/badges/powered-by-black-magic.svg)
-
-ArcadeCord is patch for [Waterfall](https://github.com/PaperMC/Waterfall) with many features for ArcadiaMC network.
-
+    <h1>ArcadeCord</h1>
+    <strong>ArcadeCord is patch for <a href="https://github.com/PaperMC/Waterfall">Waterfall</a> with many features.</strong><br><br>
+    <img src="https://forthebadge.com/images/badges/made-with-java.svg" height="30">&nbsp;
+    <img src="https://forthebadge.com/images/badges/built-with-love.svg" height="30">&nbsp;
+    <a href="https://discord.gg/pR2tj432NS"><img src="https://ci.arcadiamc.cz/buildStatus/icon?job=arcadecord%2Fmain&style=flat-square"></a>&nbsp;
 </div>
 
 ## Downloads
-![build](https://ci.arcadiamc.cz/buildStatus/icon?job=arcadecord%2Fmain)
 
 ### Proxy
 [ArcadeCord](https://ci.arcadiamc.cz/job/arcadecord/job/main/lastSuccessfulBuild/artifact/ArcadeCord-Proxy/bootstrap/target/ArcadeCord.jar)
