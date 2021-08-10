@@ -1,0 +1,721 @@
+From 9952418e78a709239dc54d0969cadc321b25c88b Mon Sep 17 00:00:00 2001
+From: Speedy11CZ <michalspisak53@gmail.com>
+Date: Tue, 10 Aug 2021 05:08:44 +0200
+Subject: [PATCH] POM Changes
+
+
+diff --git a/api/pom.xml b/api/pom.xml
+index 0680a5a5..f522c948 100644
+--- a/api/pom.xml
++++ b/api/pom.xml
+@@ -4,42 +4,41 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-api</artifactId>
++    <artifactId>arcadecord-api</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-API</name>
++    <name>ArcadeCord-API</name>
+     <description>API implemented by the Elastic Portal Suite</description>
+ 
+     <dependencies>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-chat</artifactId>
+-            <version>${project.version}</version>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-chat</artifactId>
++            <version>1.17-R0.1-SNAPSHOT</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-config</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-config</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-event</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-event</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-protocol</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-protocol</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/bootstrap/pom.xml b/bootstrap/pom.xml
+index 7a9e8258..37ab8027 100644
+--- a/bootstrap/pom.xml
++++ b/bootstrap/pom.xml
+@@ -4,19 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-bootstrap</artifactId>
++    <artifactId>arcadecord-bootstrap</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Bootstrap</name>
+-    <description>Java 1.6 loader for Waterfall</description>
++    <name>ArcadeCord-Bootstrap</name>
++    <description>Java 1.6 loader for ArcadeCord</description>
+ 
+     <properties>
+         <maven.deploy.skip>true</maven.deploy.skip>
+@@ -29,15 +28,15 @@
+ 
+     <dependencies>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-proxy</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-proxy</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+     </dependencies>
+ 
+     <build>
+-        <finalName>Waterfall</finalName>
++        <finalName>ArcadeCord</finalName>
+         <plugins>
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+diff --git a/chat/pom.xml b/chat/pom.xml
+index cfa0e16e..232b5235 100644
+--- a/chat/pom.xml
++++ b/chat/pom.xml
+@@ -4,19 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-chat</artifactId>
++    <artifactId>arcadecord-chat</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Chat</name>
+-    <description>Minecraft JSON chat API intended for use with Waterfall</description>
++    <name>ArcadeCord-Chat</name>
++    <description>Minecraft JSON chat API intended for use with ArcadeCord</description>
+ 
+     <dependencies>
+         <dependency>
+diff --git a/config/pom.xml b/config/pom.xml
+index 67e2500f..e1880e75 100644
+--- a/config/pom.xml
++++ b/config/pom.xml
+@@ -4,19 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-config</artifactId>
++    <artifactId>arcadecord-config</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Config</name>
+-    <description>Generic java configuration API intended for use with Waterfall</description>
++    <name>ArcadeCord-Config</name>
++    <description>Generic java configuration API intended for use with ArcadeCord</description>
+ 
+     <dependencies>
+         <dependency>
+diff --git a/event/pom.xml b/event/pom.xml
+index 563783e9..abd2f3be 100644
+--- a/event/pom.xml
++++ b/event/pom.xml
+@@ -4,17 +4,16 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-event</artifactId>
++    <artifactId>arcadecord-event</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Event</name>
+-    <description>Generic java event dispatching API intended for use with Waterfall.</description>
++    <name>ArcadeCord-Event</name>
++    <description>Generic java event dispatching API intended for use with ArcadeCord.</description>
+ </project>
+diff --git a/log/pom.xml b/log/pom.xml
+index 3663d6d9..2e5b20ce 100644
+--- a/log/pom.xml
++++ b/log/pom.xml
+@@ -4,19 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-log</artifactId>
++    <artifactId>arcadecord-log</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Log</name>
+-    <description>Simplistic and performant java.util.Logger based logger and console API designed for use with Waterfall and Minecraft related applications.</description>
++    <name>ArcadeCord-Log</name>
++    <description>Simplistic and performant java.util.Logger based logger and console API designed for use with ArcadeCord and Minecraft related applications.</description>
+ 
+     <dependencies>
+         <dependency>
+@@ -26,8 +25,8 @@
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-chat</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-chat</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/log4j/pom.xml b/log4j/pom.xml
+index 7ec6e530..fa4b65b9 100644
+--- a/log4j/pom.xml
++++ b/log4j/pom.xml
+@@ -3,19 +3,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-log4j</artifactId>
++    <artifactId>arcadecord-log4j</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Log</name>
+-    <description>Simplistic and performant Log4j2 based logger and console API designed for use with Waterfall and Minecraft related applications.</description>
++    <name>ArcadeCord-Log</name>
++    <description>Simplistic and performant Log4j2 based logger and console API designed for use with ArcadeCord and Minecraft related applications.</description>
+ 
+     <properties>
+         <log4j2.version>2.14.0</log4j2.version>
+diff --git a/module/cmd-alert/pom.xml b/module/cmd-alert/pom.xml
+index 11e990d9..2913fa6a 100644
+--- a/module/cmd-alert/pom.xml
++++ b/module/cmd-alert/pom.xml
+@@ -4,14 +4,13 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-module</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-alert</artifactId>
++    <artifactId>arcadecord-module-cmd-alert</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/cmd-find/pom.xml b/module/cmd-find/pom.xml
+index b732d67f..81af41c3 100644
+--- a/module/cmd-find/pom.xml
++++ b/module/cmd-find/pom.xml
+@@ -4,14 +4,13 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-module</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-find</artifactId>
++    <artifactId>arcadecord-module-cmd-find</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/cmd-list/pom.xml b/module/cmd-list/pom.xml
+index d17cb787..c0b72dea 100644
+--- a/module/cmd-list/pom.xml
++++ b/module/cmd-list/pom.xml
+@@ -4,14 +4,13 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-module</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-list</artifactId>
++    <artifactId>arcadecord-module-cmd-list</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/cmd-send/pom.xml b/module/cmd-send/pom.xml
+index d1972708..94a2013c 100644
+--- a/module/cmd-send/pom.xml
++++ b/module/cmd-send/pom.xml
+@@ -4,14 +4,13 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-module</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-send</artifactId>
++    <artifactId>arcadecord-module-cmd-send</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/cmd-server/pom.xml b/module/cmd-server/pom.xml
+index 3b2c4952..13699971 100644
+--- a/module/cmd-server/pom.xml
++++ b/module/cmd-server/pom.xml
+@@ -4,14 +4,13 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-module</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-server</artifactId>
++    <artifactId>arcadecord-module-cmd-server</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/pom.xml b/module/pom.xml
+index 0ef98d58..64f95418 100644
+--- a/module/pom.xml
++++ b/module/pom.xml
+@@ -4,19 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module</artifactId>
++    <artifactId>arcadecord-module</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>pom</packaging>
+ 
+-    <name>Waterfall Modules</name>
+-    <description>Parent project for all Waterfall modules.</description>
++    <name>ArcadeCord Modules</name>
++    <description>Parent project for all ArcadeCord modules.</description>
+ 
+     <modules>
+         <module>cmd-alert</module>
+@@ -28,15 +27,15 @@
+     </modules>
+ 
+     <properties>
+-        <module.author>WaterfallMC</module.author>
++        <module.author>ArcadiaMC</module.author>
+         <maven.deploy.skip>true</maven.deploy.skip>
+         <maven.javadoc.skip>true</maven.javadoc.skip>
+     </properties>
+ 
+     <dependencies>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-api</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-api</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/module/reconnect-yaml/pom.xml b/module/reconnect-yaml/pom.xml
+index b88398cf..35be25bd 100644
+--- a/module/reconnect-yaml/pom.xml
++++ b/module/reconnect-yaml/pom.xml
+@@ -4,14 +4,13 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-module</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-reconnect-yaml</artifactId>
++    <artifactId>arcadecord-module-reconnect-yaml</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/native/pom.xml b/native/pom.xml
+index 652a869d..55604fff 100644
+--- a/native/pom.xml
++++ b/native/pom.xml
+@@ -4,19 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-native</artifactId>
++    <artifactId>arcadecord-native</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Native</name>
+-    <description>Optional native code to speed up and enhance Waterfall functionality.</description>
++    <name>ArcadeCord-Native</name>
++    <description>Optional native code to speed up and enhance ArcadeCord functionality.</description>
+ 
+     <dependencies>
+         <dependency>
+diff --git a/pom.xml b/pom.xml
+index 8d86e36c..fa1bc2c5 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -4,25 +4,20 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-super</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-super</artifactId>
+         <version>dev-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-parent</artifactId>
++    <artifactId>arcadecord-parent</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>pom</packaging>
+ 
+-    <name>Waterfall-Parent</name>
+-    <description>Parent project for all Waterfall modules.</description>
+-    <url>https://github.com/WaterfallMC/Waterfall</url>
++    <name>ArcadeCord-Parent</name>
++    <description>Parent project for all ArcadeCord modules.</description>
++    <url>https://github.com/ArcadiaMC-cz/ArcadeCord</url>
+     <inceptionYear>2015</inceptionYear>
+-    <organization>
+-        <name>WaterfallMC</name>
+-        <url>https://github.com/WaterfallMC</url>
+-    </organization>
+     <licenses>
+         <license>
+             <name>Modified BSD 3-Clause License</name>
+@@ -47,6 +42,9 @@
+         <developer>
+             <id>fuzzybot</id>
+         </developer>
++        <developer>
++            <id>Speedy11CZ</id>
++        </developer>
+     </developers>
+ 
+     <modules>
+@@ -66,23 +64,23 @@
+     </modules>
+ 
+     <scm>
+-        <connection>scm:git:git@github.com:com:WaterfallMC/Waterfall.git</connection>
+-        <developerConnection>scm:git:git@github.com:WaterfallMC/Waterfall.git</developerConnection>
+-        <url>git@github.com:WaterfallMC/Waterfall.git</url>
++        <connection>scm:git:git@github.com:com:ArcadiaMC-cz/ArcadeCord.git</connection>
++        <developerConnection>scm:git:git@github.com:ArcadiaMC-cz/ArcadeCord.git</developerConnection>
++        <url>git@github.com:ArcadiaMC-cz/ArcadeCord.git</url>
+     </scm>
+     <issueManagement>
+         <system>GitHub</system>
+-        <url>https://github.com/PaperMC/Waterfall/issues</url>
++        <url>https://github.com/ArcadiaMC-cz/ArcadeCord/issues</url>
+     </issueManagement>
+ 
+     <distributionManagement>
+         <repository>
+-            <id>papermc-releases</id>
+-            <url>https://papermc.io/repo/repository/maven-releases/</url>
++            <id>arcadiamc-releases</id>
++            <url>https://nexus.arcadiamc.cz/repository/maven-releases/</url>
+         </repository>
+         <snapshotRepository>
+-            <id>papermc-snapshots</id>
+-            <url>https://papermc.io/repo/repository/maven-snapshots/</url>
++            <id>arcadiamc-snapshots</id>
++            <url>https://nexus.arcadiamc.cz/repository/maven-snapshots/</url>
+         </snapshotRepository>
+     </distributionManagement>
+ 
+@@ -397,8 +395,8 @@
+                                 </goals>
+                                 <inherited>false</inherited>
+                                 <configuration>
+-                                    <doctitle>Waterfall ${project.version} API</doctitle>
+-                                    <windowtitle>Waterfall ${project.version} API</windowtitle>
++                                    <doctitle>ArcadeCord ${project.version} API</doctitle>
++                                    <windowtitle>ArcadeCord ${project.version} API</windowtitle>
+                                     <sourcepath>
+                                         api/target/generated-sources/delombok;
+                                         chat/target/generated-sources/delombok
+diff --git a/protocol/pom.xml b/protocol/pom.xml
+index dbc0a3ab..5194d7ee 100644
+--- a/protocol/pom.xml
++++ b/protocol/pom.xml
+@@ -4,19 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-protocol</artifactId>
++    <artifactId>arcadecord-protocol</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Protocol</name>
+-    <description>Minimal implementation of the Minecraft protocol for use in Waterfall</description>
++    <name>ArcadeCord-Protocol</name>
++    <description>Minimal implementation of the Minecraft protocol for use in ArcadeCord</description>
+ 
+     <!-- We really shouldn't depend on external repositories, but at least this is the Central staging one -->
+     <repositories>
+@@ -41,8 +40,8 @@
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-chat</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-chat</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/proxy/pom.xml b/proxy/pom.xml
+index c3a2eeb6..f8265306 100644
+--- a/proxy/pom.xml
++++ b/proxy/pom.xml
+@@ -4,19 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-proxy</artifactId>
++    <artifactId>arcadecord-proxy</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Proxy</name>
+-    <description>Proxy component of the Elastic Portal Suite</description>
++    <name>ArcadeCord-Proxy</name>
++    <description>ArcadeCord component of the Elastic Portal Suite</description>
+ 
+     <properties>
+         <maven.deploy.skip>true</maven.deploy.skip>
+@@ -64,32 +63,32 @@
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-api</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-api</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-log4j</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-log4j</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-native</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-native</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-protocol</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-protocol</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-query</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-query</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/query/pom.xml b/query/pom.xml
+index dea7d85f..81642c2d 100644
+--- a/query/pom.xml
++++ b/query/pom.xml
+@@ -4,19 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>cz.arcadiamc</groupId>
++        <artifactId>arcadecord-parent</artifactId>
+         <version>1.17-R0.1-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-query</artifactId>
++    <artifactId>arcadecord-query</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Query</name>
+-    <description>Minecraft query implementation based on the Waterfall API.</description>
++    <name>ArcadeCord-Query</name>
++    <description>Minecraft query implementation based on the ArcadeCord API.</description>
+ 
+     <dependencies>
+         <dependency>
+@@ -26,8 +25,8 @@
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-api</artifactId>
++            <groupId>cz.arcadiamc</groupId>
++            <artifactId>arcadecord-api</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+-- 
+2.28.0.windows.1
+
