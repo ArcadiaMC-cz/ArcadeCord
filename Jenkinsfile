@@ -12,6 +12,11 @@ pipeline {
         stage('Artifact') {
           steps {
             archiveArtifacts 'ArcadeCord-Proxy/bootstrap/target/ArcadeCord.jar'
+            archiveArtifacts 'ArcadeCord-Proxy/module/cmd-find/target/cmd_find.jar'
+            archiveArtifacts 'ArcadeCord-Proxy/module/cmd-list/target/cmd_list.jar'
+            archiveArtifacts 'ArcadeCord-Proxy/module/cmd-send/target/cmd_send.jar'
+            archiveArtifacts 'ArcadeCord-Proxy/module/cmd-server/target/cmd_server.jar'
+            archiveArtifacts 'ArcadeCord-Proxy/module/reconnect-yaml/target/reconnect_yaml.jar'
           }
         }
 
