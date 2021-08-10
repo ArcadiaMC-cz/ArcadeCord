@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh './arcadecord build'
+        sh 'git submodule update --recursive --init && ./scripts/applyPatches.sh'
+        sh 'pushd ArcadeCord-Proxy'
+        sh 'mvn clean package -Dbuild.number=${env.BUILD_NUMBER}'
       }
     }
 
@@ -26,10 +28,8 @@ pipeline {
             configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS_XML')]) {
               sh 'mvn -Dmaven.test.skip=true -s $MAVEN_SETTINGS_XML -f ArcadeCord-Proxy deploy'
             }
-
           }
         }
-
       }
     }
 
@@ -39,6 +39,5 @@ pipeline {
         javadoc(javadocDir: 'ArcadeCord-Proxy/api/target/site/apidocs', keepAll: true)
       }
     }
-
   }
 }

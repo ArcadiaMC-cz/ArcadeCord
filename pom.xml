@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
 
     <name>ArcadeCord-Parent</name>
-    <description>Super project for FlameCord.</description>
+    <description>Super project for ArcadeCord.</description>
     <url>https://github.com/ArcadiaMC-cz/ArcadeCord</url>
 
     <modules>
