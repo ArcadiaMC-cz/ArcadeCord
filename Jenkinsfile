@@ -20,15 +20,19 @@ pipeline {
             configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS_XML')]) {
               sh 'mvn -Dmaven.test.skip=true -s $MAVEN_SETTINGS_XML -f ArcadeCord-Proxy deploy'
             }
+
           }
         }
+
       }
     }
 
     stage('Javadoc') {
       steps {
-        sh 'mvn -Dmaven.test.skip=true -s $MAVEN_SETTINGS_XML -f ArcadeCord-Proxy javadoc:javadoc'
+        sh 'mvn -Dmaven.test.skip=true -f ArcadeCord-Proxy javadoc:javadoc'
+        javadoc(javadocDir: 'ArcadeCord-Proxy/api/target/site/apidocs', keepAll: true)
       }
     }
+
   }
 }
