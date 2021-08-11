@@ -4,8 +4,9 @@ pipeline {
     stage('Build') {
       steps {
         sh 'git submodule update --recursive --init && ./scripts/applyPatches.sh'
-        sh 'pushd ArcadeCord-Proxy'
-        sh 'mvn clean package -Dbuild.number=${env.BUILD_NUMBER}'
+        dir("ArcadeCord-Proxy") {
+            sh "mvn clean package -Dbuild.number=${env.BUILD_NUMBER}"
+        }
       }
     }
 
