@@ -1,11 +1,11 @@
-From 15b68d884372972a67feef7d849555d51198c816 Mon Sep 17 00:00:00 2001
+From d61207f8ff63d5c35fc441f59bc7b0b4fc359465 Mon Sep 17 00:00:00 2001
 From: Speedy11CZ <michalspisak53@gmail.com>
 Date: Wed, 11 Aug 2021 01:56:50 +0200
 Subject: [PATCH] Fetch modules from the ArcadiaMC Jenkins
 
 
 diff --git a/proxy/src/main/java/net/md_5/bungee/module/JenkinsModuleSource.java b/proxy/src/main/java/net/md_5/bungee/module/JenkinsModuleSource.java
-index 338c30d3..26616f68 100644
+index 338c30d3..df4a36da 100644
 --- a/proxy/src/main/java/net/md_5/bungee/module/JenkinsModuleSource.java
 +++ b/proxy/src/main/java/net/md_5/bungee/module/JenkinsModuleSource.java
 @@ -3,8 +3,10 @@ package net.md_5.bungee.module;
@@ -20,7 +20,7 @@ index 338c30d3..26616f68 100644
  import lombok.Data;
  import net.md_5.bungee.Util;
  
-@@ -18,21 +20,13 @@ public class JenkinsModuleSource implements ModuleSource
+@@ -18,21 +20,14 @@ public class JenkinsModuleSource implements ModuleSource
          System.out.println( "Attempting to Jenkins download module " + module.getName() + " v" + version.getBuild() );
          try
          {
@@ -37,9 +37,10 @@ index 338c30d3..26616f68 100644
              // 15 second timeout at various stages
              con.setConnectTimeout( 15000 );
              con.setReadTimeout( 15000 );
--            con.setRequestProperty( "User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36" );
- 
+             con.setRequestProperty( "User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36" );
+-
 -            Files.copy( con.getInputStream(), module.getFile().toPath(), StandardCopyOption.REPLACE_EXISTING );
++            
 +            Files.write( ByteStreams.toByteArray( con.getInputStream() ), module.getFile() );
              System.out.println( "Download complete" );
          } catch ( IOException ex )
