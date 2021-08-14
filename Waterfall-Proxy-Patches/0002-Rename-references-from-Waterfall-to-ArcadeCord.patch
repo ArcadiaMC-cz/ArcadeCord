@@ -1,4 +1,4 @@
-From 14024066bbd0f5fef2a2302712642879fd894c3a Mon Sep 17 00:00:00 2001
+From a92c907d05a4dc0287a083992b6cb7a4cb31e2a9./ Mon Sep 17 00:00:00 2001
 From: Speedy11CZ <michalspisak53@gmail.com>
 Date: Tue, 10 Aug 2021 05:12:30 +0200
 Subject: [PATCH] Rename references from Waterfall to ArcadeCord
@@ -30,6 +30,24 @@ index d703d6d2..8d4c69c6 100644
          this.logger = logger;
      }
  
+diff --git a/pom.xml b/pom.xml
+index fa1bc2c5..85e0922b 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -3,13 +3,6 @@
+          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+     <modelVersion>4.0.0</modelVersion>
+ 
+-    <parent>
+-        <groupId>cz.arcadiamc</groupId>
+-        <artifactId>arcadecord-super</artifactId>
+-        <version>dev-SNAPSHOT</version>
+-        <relativePath>../pom.xml</relativePath>
+-    </parent>
+-
+     <artifactId>arcadecord-parent</artifactId>
+     <version>1.17-R0.1-SNAPSHOT</version>
+     <packaging>pom</packaging>
 diff --git a/proxy/src/main/java/net/md_5/bungee/BungeeCord.java b/proxy/src/main/java/net/md_5/bungee/BungeeCord.java
 index 07d74c67..41dc620e 100644
 --- a/proxy/src/main/java/net/md_5/bungee/BungeeCord.java
