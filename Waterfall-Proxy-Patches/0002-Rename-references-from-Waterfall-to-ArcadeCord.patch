@@ -1,4 +1,4 @@
-From a92c907d05a4dc0287a083992b6cb7a4cb31e2a9./ Mon Sep 17 00:00:00 2001
+From 50a97e477a67f5b199930089cb3f4e5f9233c3d9 Mon Sep 17 00:00:00 2001
 From: Speedy11CZ <michalspisak53@gmail.com>
 Date: Tue, 10 Aug 2021 05:12:30 +0200
 Subject: [PATCH] Rename references from Waterfall to ArcadeCord
@@ -31,10 +31,10 @@ index d703d6d2..8d4c69c6 100644
      }
  
 diff --git a/pom.xml b/pom.xml
-index fa1bc2c5..85e0922b 100644
+index fa1bc2c5..ccf76526 100644
 --- a/pom.xml
 +++ b/pom.xml
-@@ -3,13 +3,6 @@
+@@ -3,13 +3,7 @@
           xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
      <modelVersion>4.0.0</modelVersion>
  
@@ -45,9 +45,19 @@ index fa1bc2c5..85e0922b 100644
 -        <relativePath>../pom.xml</relativePath>
 -    </parent>
 -
++    <groupId>cz.arcadiamc</groupId>
      <artifactId>arcadecord-parent</artifactId>
      <version>1.17-R0.1-SNAPSHOT</version>
      <packaging>pom</packaging>
+@@ -17,7 +11,7 @@
+     <name>ArcadeCord-Parent</name>
+     <description>Parent project for all ArcadeCord modules.</description>
+     <url>https://github.com/ArcadiaMC-cz/ArcadeCord</url>
+-    <inceptionYear>2015</inceptionYear>
++    <inceptionYear>2015</inceptionYear>cd
+     <licenses>
+         <license>
+             <name>Modified BSD 3-Clause License</name>
 diff --git a/proxy/src/main/java/net/md_5/bungee/BungeeCord.java b/proxy/src/main/java/net/md_5/bungee/BungeeCord.java
 index 07d74c67..41dc620e 100644
 --- a/proxy/src/main/java/net/md_5/bungee/BungeeCord.java
