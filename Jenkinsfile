@@ -1,5 +1,10 @@
 pipeline {
   agent any
+
+  tools {
+    jdk '16.0.1'
+  }
+  
   stages {
     stage('Build') {
       steps {
