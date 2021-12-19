@@ -1,14 +1,14 @@
-From 5d994cde89e462359e288a6f8f85ff36f5b7744d Mon Sep 17 00:00:00 2001
+From 9b4568370d91469926ddbacff16516477591b2e2 Mon Sep 17 00:00:00 2001
 From: Speedy11CZ <michalspisak53@gmail.com>
 Date: Tue, 10 Aug 2021 05:16:41 +0200
 Subject: [PATCH] ArcadeCord rebrand
 
 
 diff --git a/proxy/src/main/java/io/github/waterfallmc/waterfall/conf/WaterfallConfiguration.java b/proxy/src/main/java/io/github/waterfallmc/waterfall/conf/WaterfallConfiguration.java
-index 527f310e..08fa2557 100644
+index e31fb00a..9d6fbcd8 100644
 --- a/proxy/src/main/java/io/github/waterfallmc/waterfall/conf/WaterfallConfiguration.java
 +++ b/proxy/src/main/java/io/github/waterfallmc/waterfall/conf/WaterfallConfiguration.java
-@@ -51,7 +51,9 @@ public class WaterfallConfiguration extends Configuration {
+@@ -68,7 +68,9 @@ public class WaterfallConfiguration extends Configuration {
          YamlConfig config = new YamlConfig(new File("waterfall.yml"));
          config.load(false); // Load, but no permissions
          logInitialHandlerConnections = config.getBoolean( "log_initial_handler_connections", logInitialHandlerConnections );
@@ -20,5 +20,5 @@ index 527f310e..08fa2557 100644
          // Throttling options
          tabThrottle = config.getInt("throttling.tab_complete", tabThrottle);
 -- 
-2.28.0.windows.1
+2.25.1
 

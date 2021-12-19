@@ -1,4 +1,4 @@
-From 9248ec4e632e0ee8825f8010df7781a88d3ec856 Mon Sep 17 00:00:00 2001
+From a9001affb6f9ba1376e32464ccc0685813350825 Mon Sep 17 00:00:00 2001
 From: Speedy11CZ <michalspisak53@gmail.com>
 Date: Tue, 10 Aug 2021 05:12:30 +0200
 Subject: [PATCH] Rename references from Waterfall to ArcadeCord
@@ -31,7 +31,7 @@ index d703d6d2..8d4c69c6 100644
      }
  
 diff --git a/pom.xml b/pom.xml
-index fa1bc2c5..f515b6ff 100644
+index bec35c13..784f23af 100644
 --- a/pom.xml
 +++ b/pom.xml
 @@ -3,13 +3,7 @@
@@ -47,7 +47,7 @@ index fa1bc2c5..f515b6ff 100644
 -
 +    <groupId>cz.arcadiamc</groupId>
      <artifactId>arcadecord-parent</artifactId>
-     <version>1.17-R0.1-SNAPSHOT</version>
+     <version>1.18-R0.1-SNAPSHOT</version>
      <packaging>pom</packaging>
 diff --git a/proxy/src/main/java/net/md_5/bungee/BungeeCord.java b/proxy/src/main/java/net/md_5/bungee/BungeeCord.java
 index 07d74c67..41dc620e 100644
@@ -124,5 +124,5 @@ index 0644b8cd..91bb0c91 100644
              SocketAddress address = Util.getAddr( addr );
              ServerInfo info = ProxyServer.getInstance().constructServerInfo( name, address, motd, restricted );
 -- 
-2.28.0.windows.1
+2.25.1
 
