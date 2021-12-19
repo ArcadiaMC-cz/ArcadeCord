@@ -37,7 +37,7 @@ Maven
 <dependency>
     <groupId>cz.arcadiamc</groupId>
     <artifactId>arcadecord-api</artifactId>
-    <version>1.17-R0.1-SNAPSHOT</version>
+    <version>1.18-R0.1-SNAPSHOT</version>
     <scope>provided</scope>
 </dependency>
 ```
@@ -52,7 +52,7 @@ repositories {
 ```
 ```groovy
 dependencies {
-    compileOnly 'cz.arcadiamc:arcadecord-api:1.17-R0.1-SNAPSHOT'
+    compileOnly 'cz.arcadiamc:arcadecord-api:1.18-R0.1-SNAPSHOT'
 }
 ```
 
